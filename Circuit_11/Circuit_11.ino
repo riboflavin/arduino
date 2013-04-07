@@ -67,12 +67,13 @@ const int buzzerPin = 9;
 
 // Length must equal the total number of notes and spaces 
 
-const int songLength = 18;
+//const int songLength = 18;
 
 // Notes is an array of text characters corresponding to the notes
 // in your song. A space represents a rest (no tone)
 
 char notes[] = "cdfda ag cdfdg gf "; // a space represents a rest
+int songLength = sizeof(notes) / sizeof(notes[0]);
 
 // Beats is an array values for each note and rest.
 // A "1" represents a quarter-note, 2 a half-note, etc.

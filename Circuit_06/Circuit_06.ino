@@ -105,9 +105,9 @@ void loop()
   // in the functions below. Uncomment ONE of them to
   // try it out:
 
-  manualTune();  // manually change the range from light to dark
+  //manualTune();  // manually change the range from light to dark
   
-  //autoTune();  // have the Arduino do the work for us!
+  autoTune();  // have the Arduino do the work for us!
 
   // The above functions will alter lightLevel to be cover the
   // range from full-on to full-off. Now we can adjust the
@@ -187,7 +187,7 @@ void autoTune()
   
   lightLevel = map(lightLevel, low+30, high-30, 0, 255);
   lightLevel = constrain(lightLevel, 0, 255);
-  
+  lightLevel = 255 - lightLevel;
   // Now we'll return to the main loop(), and send lightLevel
   // to the LED.
 }
