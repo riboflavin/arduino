@@ -123,9 +123,9 @@ void loop()
 
   //randomLED();          // Blink random LEDs
   
-  marquee();
+  //marquee();
 
-  //binaryCount();        // Bit patterns from 0 to 255
+  binaryCount();        // Bit patterns from 0 to 255
 }
 
 
