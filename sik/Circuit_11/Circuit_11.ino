@@ -60,7 +60,7 @@ and returns the corresponding frequency from this table:
 For more information, see http://arduino.cc/en/Tutorial/Tone
 */
   
-const int buzzerPin = 9;
+const int buzzerPin = 3;
 
 // We'll set up an array with the notes we want to play
 // change these values to make different songs!
