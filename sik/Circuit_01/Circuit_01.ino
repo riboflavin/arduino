@@ -123,7 +123,7 @@ void loop()
   // milliseconds. There are 1000 milliseconds in a second, so if
   // you delay(1000), it will pause for exactly one second:
   
-  int x = 20;
+  int x = 3000;
   delay(x);              // Wait for one second
   
   digitalWrite(13, LOW);    // Turn off the LED

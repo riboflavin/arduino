@@ -21,20 +21,11 @@
 
 *************************************************/
 
-//comment out to fix for upload to attiny84
-//#include <avr/interrupt.h>
+#include <avr/interrupt.h>
 #include <avr/pgmspace.h>
+#include <Arduino.h>
 #include <pins_arduino.h>
 #include "Tone.h"
-
-// Add this to Tone.cpp begin
-    //For Arduino 1.0
-    #if ARDUINO >= 100
-        #include <Arduino.h>
-    #else
-        #include <WProgram.h>
-    #endif
-// Add this to Tone.cpp end
 
 #if defined(__AVR_ATmega8__)
 #define TCCR2A TCCR2
@@ -47,22 +38,6 @@
 #define TIMER2_COMPA_vect TIMER2_COMP_vect
 #define TIMSK1 TIMSK
 #endif
-
-//attiny84?
-//#if defined(__AVR_ATmega8__)
-#define TCCR2A TCCR1A
-#define TCCR2B TCCR1B
-#define COM2A1 COM1A1
-#define COM2A0 COM1A0
-#define OCR2A OCR1A
-#define TIMSK2 TIMSK0
-#define OCIE2A OCIE1A
-#define TIMER2_COMPA_vect TIMER2_COMP_vect
-#define CS20 CS10
-#define WGM21 WGM11
-//#define TIMSK1 TIMSK1
-
-//#endif
 
 // timerx_toggle_count:
 //  > 0 - duration specified
